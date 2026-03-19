@@ -75,3 +75,23 @@ footer { padding: 80px 0; text-align: center; background: #050810; }
 .footer-socials a { color: var(--text-dim); font-size: 1.8rem; margin: 0 15px; transition: 0.3s; }
 .footer-socials a:hover { color: var(--primary); }
 .copyright { margin-top: 30px; font-size: 0.8rem; color: #475569; }
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px border var(--primary);
+    transition: 0.3s;
+}
+
+.project-link:hover {
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* Optional: Add a subtle glow to the project icons */
+.project-icon i {
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
