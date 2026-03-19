@@ -1,0 +1,77 @@
+:root {
+    --primary: #38bdf8; /* Robotics Blue */
+    --bg: #0b0f1a;
+    --card-bg: #161e2e;
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text-main); overflow-x: hidden; }
+
+.container { width: 85%; max-width: 1200px; margin: auto; }
+.section-title { font-size: 2.5rem; text-align: center; margin-bottom: 50px; font-weight: 700; }
+.highlight { color: var(--primary); }
+
+/* --- NAV --- */
+nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 10%; position: absolute; width: 100%; top: 0;
+}
+.logo { font-family: 'Fira Code', monospace; color: var(--primary); font-weight: bold; font-size: 1.3rem; }
+nav ul { display: flex; list-style: none; gap: 30px; }
+nav ul a { color: var(--text-dim); text-decoration: none; transition: 0.3s; font-size: 0.9rem; }
+nav ul a:hover { color: var(--primary); }
+
+/* --- HERO --- */
+header {
+    height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: radial-gradient(circle at center, #1e293b 0%, #0b0f1a 100%);
+    text-align: center;
+}
+h1 { font-size: 5rem; letter-spacing: -3px; margin-bottom: 10px; }
+.hero-socials { margin: 25px 0; font-size: 2rem; }
+.hero-socials a { color: var(--text-main); margin: 0 15px; transition: 0.3s; }
+.hero-socials a:hover { color: var(--primary); transform: translateY(-5px); display: inline-block; }
+
+.hero-btn {
+    text-decoration: none; color: var(--primary); border: 2px solid var(--primary);
+    padding: 12px 30px; border-radius: 5px; font-weight: bold; transition: 0.3s;
+}
+.hero-btn:hover { background: var(--primary); color: var(--bg); }
+
+/* --- SECTIONS & CARDS --- */
+section { padding: 100px 0; }
+
+.about-card { background: var(--card-bg); padding: 40px; border-radius: 15px; border-left: 5px solid var(--primary); font-size: 1.2rem; }
+
+.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.skill-box { background: var(--card-bg); padding: 30px; border-radius: 15px; }
+.skill-box h3 { color: var(--primary); margin-bottom: 15px; }
+.skill-box ul { list-style: none; color: var(--text-dim); }
+
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.project-card { background: var(--card-bg); padding: 30px; border-radius: 20px; transition: 0.4s; text-align: center; }
+.project-card:hover { transform: translateY(-10px); background: #1e293b; border: 1px solid var(--primary); }
+.project-icon { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+.tag { background: #0b0f1a; color: var(--primary); padding: 5px 12px; border-radius: 5px; font-size: 0.8rem; font-family: 'Fira Code'; margin-right: 5px; }
+
+/* --- ANIMATION CLASSES --- */
+.reveal-top { transform: translateY(-50px); opacity: 0; }
+.reveal-bottom { transform: translateY(50px); opacity: 0; }
+.reveal-left { transform: translateX(-80px); opacity: 0; }
+.reveal-right { transform: translateX(80px); opacity: 0; }
+
+.reveal-top, .reveal-bottom, .reveal-left, .reveal-right {
+    transition: all 0.8s ease-out;
+}
+
+.active { transform: translate(0,0); opacity: 1; }
+
+/* --- FOOTER --- */
+footer { padding: 80px 0; text-align: center; background: #050810; }
+.contact-details { margin: 20px 0; color: var(--text-dim); }
+.footer-socials a { color: var(--text-dim); font-size: 1.8rem; margin: 0 15px; transition: 0.3s; }
+.footer-socials a:hover { color: var(--primary); }
+.copyright { margin-top: 30px; font-size: 0.8rem; color: #475569; }
